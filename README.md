@@ -18,7 +18,8 @@
 02 归属： js && ts 属于弱类型（python是强类型） <br>
 
 ## 为什么要用typescript?
-01 适合大型项目： 更高的维护性，增强了编辑器的功能，包括代码补全、接口提示、跳转到定义、代码重构等
+01 适合大型项目： 更高的维护性，增强了编辑器的功能，包括代码补全、接口提示、跳转到定义、代码重构等<br>
+02 更严谨，更不容易出错<br>
 
 ## 安装
 01 全局安装typecript: npm install -g typescript<br>
@@ -136,5 +137,28 @@ readonly id: number;
 + 抽象类是不允许被实例化的：<br>
 + + abstract
 + + 规定要继承的方法
+
+
+## tsconfig.json
++ 告诉编译器如何编译
++ tsc --init
++ tsc 编译文件生效
++ 生效文件 ｜ 目录参考 { include: ["文件1", "文件2"]}
++ 生效仅文件 { files: ["文件1", "文件2"]}
++ 不生效文件用 { exclude: ["不生效文件1", "不生效文件2"]}
++ compilerOptions: 配置参数
+````
+compilerOptions: {
+    outDir: "./build", // 配置编译后生成的js文件存放目录
+    rootDir: "./src", // 配置源ts文件存放目录
+    sourceMap: true, // 编译时，生成的信息文件，存储了位置信息，ts文件和js文件的映射
+    removeComments: true, // 编译去掉注释
+    noUnusedLocals: true, // 定义但没有使用的变量不再进行打包- 控制台会提示
+    noUnusedParameters: true, // 定义但没有使用的方法不再进行打包- 控制台会提示
+    strict: true, // 书写规范严格模式
+    noImplicitAny: true // 一定要设置静态类型 ；strict: false时生效
+    strictNullChecks: true // 不允许代码中有null; strict: false时生效
+}
+````
 
 
