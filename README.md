@@ -161,4 +161,60 @@ compilerOptions: {
 }
 ````
 
+## 联合类型 和 类型保护
+01 有两个或多个类型
+````
+interface One {
+    name: string,
+    say: () => {}
+}
+
+interface Two {
+    age: number,
+    skill: () => {}
+}
+
+function three(params: One|Two) {
+    if (params.say) {
+        (params as One).say()
+    } else {
+        (params as Two).skill()
+    }
+}
+02 保护： in
+03 保护：instanceOf 仅class
+````
+
+## 枚举enum
+````
+enum state = {
+    ONE,
+    TWO,
+    THREE
+}
+枚举默认值从0开始， 可以反查， 通过下标
+````
+
+## 泛型
+01 定义： 在定义 “ 函数 ” ，“ 接口” 和“ 类 ” 的时候， 不预先指定类型， 在使用的时候再指定类型
++ 泛型函数中使用
++ + 简称T代表泛型
++ + 多个泛型 <T, P>
++ + 支持类型推断
+    ````   
+    function ceshi <T, P>(name: T, age: P) {
+        console.log('会议')
+    }
+    ceshi<string>('但是', 18)
+
+    ````
++ 泛型的约束
++ + 用继承
+
+## 命名空间
++ npm init -y
++ namespace
++ 减少全局变量污染
+
+
 

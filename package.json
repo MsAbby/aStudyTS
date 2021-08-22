@@ -1,0 +1,20 @@
+{
+  "name": "aStudyTS",
+  "version": "1.0.0",
+  "description": "## typescript? 01 定义1： 添加了类型系统的javascript<br> 01 定义2： 属于静态类型，弱类型的语言<br> 01 定义3： 是完全兼容 JavaScript 的，它不会修改 JavaScript 运行时的特性<br> 02 核心： 类型<br> 03 属性： 静态类型<br>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MsAbby/aStudyTS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MsAbby/aStudyTS/issues"
+  },
+  "homepage": "https://github.com/MsAbby/aStudyTS#readme"
+}
